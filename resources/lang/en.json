@@ -17,11 +17,12 @@
     "Yoshim 23 da WEB-dasturchiman, sohada 3 yillik tajribaga egaman":"I am a WEB-programmer at the age of 23 and have 3 years of experience in the field ",
     "Xozirda Al-Xorazimiy nomidagi Toshkent axborot texnalogiyalari":"Currently, Tashkent Information Technology named after Al-Khwarizmiy",
     "Unversiteti Urganchfiliali bitiruvchi kurs talabasiman.":"I am a graduate student of Urgench branch of the University.",
-   "Bugungi kunda butun dunyo bo`ylab tarmoq nafaqat odamlar uchun o`yin-kulgi, balki biznes g`oyalarini muvaffaqiyatli amalga oshirish va o`zini amalga oshirishning juda samar vositasidir.":"Today, the worldwide network is not only a means of entertainment for people, but also a very effective means of successful implementation and self-realization of business ideas.",
+   "Bugungi kunda butun dunyo bo`ylab tarmoq nafaqat odamlar uchun o`yin-kulgi, balki biznes g`oyalarini muvaffaqiyatli amalga oshirish va o`zini amalga oshirish uchun juda samarali vositadir.":"Today, the worldwide network is not only a means of entertainment for people, but also a very effective means of successful implementation and self-realization of business ideas.",
    "Bundan tashqari, Internet sizning faoliyatingizni reklama qilish uchun juda foydali platformadir.":"In addition, the Internet is a very useful platform for advertising your activities.",
    "Shu sabablarga ko`ra, bizning vaqtimizda veb -saytlarni ishlab chiqish tegishli va talab qilinadigan xizmatdir.":"For these reasons, website development is an appropriate and required service in our time.",
     "WEB ilova":"WEB application",
     "Internet Do`kon":"Internet Store",
+    "Internet-do`kon":"Internet Store",
     "Web Sayt":"Web Site",
     "Mobil Ilova":"Mobile App",
     "WEB dasturlash sohasida":"In the field of WEB programming",
@@ -67,6 +68,24 @@
     "Agar saytlarning asosiy turlarining to`liq to`plami sizning barcha talablaringizni qondirmasa, biz individual loyihani loyihalash va yaratish bo`yicha ishlarni bajarishga tayyormiz.":"If the full set of basic types of sites does not meet all your requirements, we are ready to work on the design and creation of an individual project.",
     "Jarayon maxsus modullarni ishlab chiqish, maxsus dizayn yechimlari va animatsiyadan foydalanishni o`z ichiga oladi.":"The process involves the development of special modules, special design solutions and the use of animation.",
     
+    "Loyihalar":"Projects",
+    "namunalar":"samples",
+    
+    "Intrnet Do`kon":"Internet Store",
+    "Sog`liqni saqlash tashkilotlari uchun turli xil ko`rninishdagi web saytlar":"Different types of websites for health care organizations",
+    "Med sayt":"Med site",
+    "WEB ilovalar":"WEB applications",
+    "Shaxsiy blog, mini vizitka uchun WEB saytlar":"Personal blog, WEB sites for mini business cards",
+    "Yangiliklar uchun web sayt":"News website",
+    "O`quv muassasalari uchun web saytlar":"Websites for educational institutions",
+    "Maktablar, o`quv muassasalari uchun WEB saytlar":"WEB sites for schools, educational institutions",
+    "Telegram va ishtimoiy tarmoqlar uchun ko`p funksiyali botlar":"Multifunction bots for telegram and social networks",
+    "Intrnet do`kon":"Internet store",
+    "Sotuv va eltib berish xizmatlari uchun intrnet do`kon saytlari":"Online store sites for sales and delivery services",
+    "Mobil ilovalar":"Mobile applications",
+    "Turli xil ko`rinishdagi yangiliklar va maqolalar uchun web saytlar":"Websites for news and articles of various kinds",
+    
+
     "Murojat uchun":"For reference",
     "Xorazm viloyati Hazorasp Tumani":"Hazarasp District of Khorezm Region",
     "Ism":"name",
@@ -74,5 +93,7 @@
     "Mavzu":"Subject",
     "Xabar":"Message",
     "Yuborish":"Submit"
+
+
 
 }

@@ -1,3 +1,4 @@
+<?php $title='contact';?>
 @include('admin.app.admin_header')
 
 

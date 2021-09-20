@@ -11,7 +11,7 @@
 |
 */
 
-use App\Http\Controllers\AdminController;
+
 
 Route::get('/','SiteController@index')->name('home');
 
@@ -19,13 +19,12 @@ Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 Route::post('/', 'SiteController@store')->name('contact');
 
-Route::get('lamg/{lang}','SiteController@switchLang')->name('lang.switch');
+Route::get('lang/{lang}','SiteController@switchLang')->name('lang.switch');
 
-Route::namespace('Admin')->name('admin')->prefix('v-admin')->group(function(){
-    Route::get('/', function(){
-  return view('admin.index');
-    })->name('panel');
-
+Route::namespace('Admin')->middleware('auth')->name('admin.')->prefix('v-admin')->group(function(){
+   Route::get('/','AdminController@index')->name('dashboard');
+    Route::resource('/feedback','FeedbackController');
+   
 });
 
 

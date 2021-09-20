@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lumino - Dashboard</title>
+	<title>Admin Panel</title>
 	<link href="/admin/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/admin/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/admin/css/datepicker3.css" rel="stylesheet">
@@ -26,10 +26,10 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+				<a class="navbar-brand" href="#"><span>Vaisov </span> Admin</a>
 				<ul class="nav navbar-top-links navbar-right">
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-						<em class="fa fa-envelope"></em><span class="label label-danger">15</span>
+					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="{{route('admin.feedback.index')}}">
+						<em class="fa fa-envelope"></em>@if($report>0)<span class="label label-danger">{{$report}}</span>@endif
 					</a>
 						<ul class="dropdown-menu dropdown-messages">
 							<li>
@@ -59,25 +59,14 @@
 							</li>
 						</ul>
 					</li>
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-						<em class="fa fa-bell"></em><span class="label label-info">5</span>
-					</a>
-						<ul class="dropdown-menu dropdown-alerts">
-							<li><a href="#">
-								<div><em class="fa fa-envelope"></em> 1 New Message
-									<span class="pull-right text-muted small">3 mins ago</span></div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-								<div><em class="fa fa-heart"></em> 12 New Likes
-									<span class="pull-right text-muted small">4 mins ago</span></div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-								<div><em class="fa fa-user"></em> 5 New Followers
-									<span class="pull-right text-muted small">4 mins ago</span></div>
-							</a></li>
-						</ul>
+					
+					<li class="dropdown">
+						<form  action="{{route('logout')}}" method="POST">
+							@csrf
+							<button type="submit" class="btn btn-warning" style="padding: 8px" >
+						<em class="fa fa-power-off"></em>
+					</button>
+				</form>
 					</li>
 				</ul>
 			</div>
@@ -89,7 +78,7 @@
 				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
 			</div>
 			<div class="profile-usertitle">
-				<div class="profile-usertitle-name">Username</div>
+				<div class="profile-usertitle-name">Vaisov</div>
 				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
 			</div>
 			<div class="clear"></div>
@@ -97,21 +86,14 @@
 		<div class="divider"></div>
 		<form role="search">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
+				<input type="text" class="form-control" placeholder="qidiruv">
 			</div>
 		</form>
 		<ul class="nav menu">
-			<li class="active"><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-			<li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> Widgets</a></li>
-			<li><a href=""><em class="glyphicon glyphicon-envelope">&nbsp;</em> Habarlar</a></li>
-			<li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
-			<li><a href=""><em class="fa fa-clone">&nbsp;</em>Bepul testlar</a></li>
-            <li><a href=""><em class="fa fa-clone">&nbsp;</em>Yangiliklar</a></li>
-            <li><a href=""><em class="fa fa-clone">&nbsp;</em>Yangiliklar</a></li>
-            <li><a href=""><em class="fa fa-clone">&nbsp;</em>Yangiliklar</a></li>
-            <li><a href=""><em class="fa fa-clone">&nbsp;</em>Yangiliklar</a></li>
-
-			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+			<li @if($title=='home')class="active" @endif><a href="{{route('admin.dashboard')}}"><em class="fa fa-dashboard">&nbsp;</em> Bosh Sahifa</a></li>
+			
+			<li @if($title=='contact')class="active" @endif><a href="{{route('admin.feedback.index')}}"><em class="glyphicon glyphicon-envelope">&nbsp;</em> Habarlar</a></li>
+			
 		</ul>
 	</div><!--/.sidebar-->
 

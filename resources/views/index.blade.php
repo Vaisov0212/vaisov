@@ -61,9 +61,9 @@
 				<h1 id="colorlib-logo"><a href="index.html">@lang('Vaisov Azamat')</a></h1>
 				<span class="position">
 					{{-- class="position" --}}
-					<a  class="active" href="{{route('lang.switch','uz')}}">Uz</a>
-					<a class="text-warning" href="{{route('lang.switch','ru')}}">RU</a>
-					<a class="text-warning" href="{{route('lang.switch','en')}}">EN</a>
+					<a @if(app()->getLocale()=='uz') class="active"@endif class="text-warning" href="{{route('lang.switch','uz')}}">Uz</a>
+					<a @if(app()->getLocale()=='ru') class="active"@endif class="text-warning" href="{{route('lang.switch','ru')}}">RU</a>
+					<a @if(app()->getLocale()=='en') class="active"@endif class="text-warning" href="{{route('lang.switch','en')}}">EN</a>
 				</span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
@@ -110,7 +110,7 @@
 					   					<div class="desc">
 						   					<h1>@lang('web sayt') <br>@lang('yaratish')</h1>
 						   					<h2>@lang('Cheksizlikning chegarasi....')</h2>
-												<p><a class="btn btn-primary btn-learn">Github  <i class="icon-github"></i></a></p>
+												<p><a class="btn btn-primary btn-learn" href="https://github.com/Vaisov0212" target="_blank">Github  <i class="icon-github"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -126,7 +126,7 @@
 					   					<div class="desc">
 						   					<h1>@lang('web ilovalarni')<br>@lang('ishlab chiqish')</h1>
 												<h2>@lang('Cheksizlikning chegarasi....')</h2>
-												<p><a class="btn btn-primary btn-learn">Github <i class="icon-github"></i></a></p>
+												<p><a class="btn btn-primary btn-learn" href="https://github.com/Vaisov0212" target="_blank">Github <i class="icon-github"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -224,7 +224,7 @@
 								</span>
 								<div class="desc">
 									<h3>@lang('Malumotlar ombori')</h3>
-									<p>SQL tili PostgreSQL MySql SQLite @lang('malumotlar omborlarni boshqarish')</p>
+									<p>SQL, PostgreSQL, MySql, SQLite @lang('malumotlar omborlarni boshqarish')</p>
 								</div>
 							</div>
 						</div>
@@ -526,13 +526,13 @@
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Work</span>
-							<h2 class="colorlib-heading animate-box">Namunalar</h2>
+							<span class="heading-meta">@lang('Loyihalar')</span>
+							<h2 class="colorlib-heading animate-box">@lang('namunalar')</h2>
 						</div>
 					</div>
 					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 						<div class="col-md-12">
-							<p class="work-menu"><span><a  class="active">WEB ilovalar</a></span> <span><a class="active" >Intrnet Do'kon</a></span> <span><a class="active" >Bot</a></span> <span><a class="active" >Mobil ilovalar</a></span></p>
+							<p class="work-menu"><span><a  class="active">@lang('WEB ilovalar')</a></span> <span><a class="active" >@lang('Intrnet Do`kon')</a></span> <span><a class="active" >@lang('Bot')</a></span> <span><a class="active" >@lang('Mobil ilovalar')</a></span></p>
 						</div>
 					</div>
 					<div class="row">
@@ -540,12 +540,12 @@
 							<div class="project" style="background-image: url(images/img-1.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 01</a></h3>
-										<span>Website</span>
+										<h3><a href="work.html">@lang('Med sayt')</a></h3>
+										<span>@lang('Sog`liqni saqlash tashkilotlari uchun turli xil ko`rninishdagi web saytlar')</span>
 										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+											<span><a ><i class="icon-share3"></i></a></span>
+											<span><a ><i class="icon-eye"></i> 196</a></span>
+											<span><a ><i class="icon-heart"></i> 89</a></span>
 										</p>
 									</div>
 								</div>
@@ -555,8 +555,8 @@
 							<div class="project" style="background-image: url(images/img-2.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 02</a></h3>
-										<span>Animation</span>
+										<h3><a href="work.html">@lang('WEB ilovalar')</a></h3>
+										<span>@lang('Shaxsiy blog, mini vizitka uchun WEB saytlar')</span>
 										<p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
 											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
@@ -570,8 +570,8 @@
 							<div class="project" style="background-image: url(images/img-3.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 03</a></h3>
-										<span>Illustration</span>
+										<h3><a href="work.html">@lang('Yangiliklar uchun web sayt')</a></h3>
+										<span>@lang('Turli xil ko`rinishdagi yangiliklar va maqolalar uchun web saytlar')</span>
 										<p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
 											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
@@ -585,8 +585,8 @@
 							<div class="project" style="background-image: url(images/img-4.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 04</a></h3>
-										<span>Application</span>
+										<h3><a href="work.html">@lang('O`quv muassasalari uchun web saytlar')</a></h3>
+										<span>@lang('Maktablar, o`quv muassasalari uchun WEB saytlar')</span>
 										<p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
 											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
@@ -600,8 +600,8 @@
 							<div class="project" style="background-image: url(images/img-5.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 05</a></h3>
-										<span>Graphic, Logo</span>
+										<h3><a href="work.html">@lang('Bot')</a></h3>
+										<span>@lang('Telegram va ishtimoiy tarmoqlar uchun ko`p funksiyali botlar')</span>
 										<p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
 											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
@@ -615,8 +615,8 @@
 							<div class="project" style="background-image: url(images/img-6.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 06</a></h3>
-										<span>Web Design</span>
+										<h3><a href="work.html">@lang('Intrnet do`kon')</a></h3>
+										<span>@lang('Sotuv va eltib berish xizmatlari uchun intrnet do`kon saytlari')</span>
 										<p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
 											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
