@@ -93,6 +93,7 @@
 			<li @if($title=='home')class="active" @endif><a href="{{route('admin.dashboard')}}"><em class="fa fa-dashboard">&nbsp;</em> Bosh Sahifa</a></li>
 			
 			<li @if($title=='contact')class="active" @endif><a href="{{route('admin.feedback.index')}}"><em class="glyphicon glyphicon-envelope">&nbsp;</em> Habarlar</a></li>
+			<li @if($title=='bot')class="active" @endif><a href="{{route('admin.bot.index')}}"><em class="fa fa-cloud">&nbsp;</em> Bot</a></li>
 			
 		</ul>
 	</div><!--/.sidebar-->

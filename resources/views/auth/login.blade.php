@@ -50,7 +50,7 @@
                 </form>
                 @if (Route::has('password.request'))
                 
-                <a class="forgot-password-link" href="{{ route('password.request') }}">
+                <a class="forgot-password-link" href="">
                     {{ __('parol esdan chiqdimi ?') }}
                 </a>
             @endif

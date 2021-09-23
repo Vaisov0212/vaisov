@@ -713,8 +713,10 @@
 	</div><!-- end:colorlib-page -->
     <script>
 	    var botmanWidget = {
-	        aboutText: 'ssdsd',
-	        introMessage: "✋ Hi! I'm form ItSolutionStuff.com"
+	        aboutText: '',
+			title:'Admin',
+	        introMessage:'✋Salom.Men qisqa savollarga javob beruvchi BOT man',
+			placeholderText:"Xabarni yuborish..."
 	    };
     </script>
 

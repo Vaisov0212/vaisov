@@ -24,11 +24,15 @@ Route::get('lang/{lang}','SiteController@switchLang')->name('lang.switch');
 Route::namespace('Admin')->middleware('auth')->name('admin.')->prefix('v-admin')->group(function(){
    Route::get('/','AdminController@index')->name('dashboard');
     Route::resource('/feedback','FeedbackController');
+    Route::resource('/bot','AdminbotController');
+
    
 });
 
 
 
-Auth::routes();
+Auth::routes([
+    'register'=>false
+]);
 
 // Route::get('/home', 'HomeController@index')->name('home');

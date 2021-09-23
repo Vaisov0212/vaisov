@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use BotMan\BotMan\Messages\Incoming\Answer;
-use App\chat;
+use App\Chat;
 
 class BotManController extends Controller
 {
@@ -13,33 +13,28 @@ class BotManController extends Controller
     {
         $botman = app('botman');
 
-        $botman->hears('{message}', function($botman, $message) {
-
-            if($message =='hello'){
-                $this->askName($botman);
-            }
-            else{
-                $botman->reply("write 'hi' for testing...");
-            }
-
-        });     
-        $botman->listen();
-    }
-
-    /**
-     * Place your BotMan logic here.
-     */
-    public function askName($botman)
-    {
-        $botman->ask('Hello! What is your Name?', function(Answer $answer) {
-
-            $name = $answer->getText();
-
-            $this->say('Nice to meet you '.$name);
+        $botman->hears('{message}', function ($bot, $message) {
+            $c=Chat::where('question','=',$message)->count();
+            
+            if($c!=0)
+                {
+                    $chat=Chat::where('question','=',$message)->inRandomOrder()->get();
+            
+                     foreach($chat as $item)
+                        {
+                             $b=$item->respond;
+                        }
+                        $bot->reply($b);
+                }
+           else{
+               $bot->reply("Kechirasiz men xozirda test rejimida ishlayabman, bu savolga tushunmadim !");
+           }
         });
+  
+        $botman->listen();  
     }
+}
+  
        
 
   
-
-}
